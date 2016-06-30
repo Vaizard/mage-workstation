@@ -1,0 +1,22 @@
+---
+mage_packages:
+  # System
+  - samba
+  # DE
+  - unity-tweak-tool
+  - variety
+  - dconf-cli
+  - dconf-editor
+  # Fonts
+  - fonts-roboto  
+  # Convenience
+  - flashplugin-installer
+  - krusader
+  - kompare
+  - krename
+  - zenmap
+  - vlc
+  - fbreader
+  - p7zip
+  - unrar
+  - gimp

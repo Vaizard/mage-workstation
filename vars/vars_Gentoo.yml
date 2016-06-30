@@ -1,0 +1,22 @@
+---
+mage_packages:
+  # System
+  - samba
+  # DE
+  - gnome-base/gnome
+  - gnome-extra/gnome-tweak-tool
+  - dconf
+  - dconf-editor
+  # Fonts
+  - roboto
+  # Convenience
+  - www-plugins/adobe-flash
+  - krusader
+  - kompare
+  - krename
+  - nmap
+  - vlc
+  - fbreader
+  - p7zip
+  - unrar
+  - gimp
