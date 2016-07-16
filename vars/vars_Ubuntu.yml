@@ -20,3 +20,6 @@ mage_packages:
   - p7zip
   - unrar
   - gimp
+  - libfreerdp-plugins-standard
+  - remmina
+  - remmina-plugin-rdp
