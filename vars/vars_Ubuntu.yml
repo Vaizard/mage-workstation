@@ -9,6 +9,8 @@ mage_packages:
   - dconf-editor
   # Fonts
   - fonts-roboto  
+  - ttf-mscorefonts-installer
+  - ttf-xfree86-nonfree
   # Convenience
   - flashplugin-installer
   - krusader

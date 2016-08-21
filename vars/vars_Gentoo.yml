@@ -20,3 +20,4 @@ mage_packages:
   - p7zip
   - unrar
   - gimp
+  - remmina

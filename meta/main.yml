@@ -16,5 +16,5 @@ galaxy_info:
     - system
 
   dependencies:
-    - { role: vaizard.mage-common }
-    - { role: vaizard.mage-vmhost, svcenable_openssh: no }
+    - { role: mage-common }
+    - { role: mage-vmhost, svcenable_openssh: no }
