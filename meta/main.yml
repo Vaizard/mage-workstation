@@ -17,4 +17,4 @@ galaxy_info:
 
   dependencies:
     - { role: mage-common }
-    - { role: mage-vmhost, svcenable_openssh: no }
+    - { role: mage-vmhost, openssh_svcenable: no }
