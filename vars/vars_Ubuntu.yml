@@ -25,3 +25,4 @@ mage_packages:
   - libfreerdp-plugins-standard
   - remmina
   - remmina-plugin-rdp
+  - atom

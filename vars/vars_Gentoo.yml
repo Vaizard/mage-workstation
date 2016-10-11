@@ -21,3 +21,4 @@ mage_packages:
   - unrar
   - gimp
   - remmina
+  - app-editors/atom
