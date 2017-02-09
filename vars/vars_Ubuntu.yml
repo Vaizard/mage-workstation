@@ -26,3 +26,8 @@ mage_packages:
   - remmina
   - remmina-plugin-rdp
   - atom
+  # OCR
+  - gimagereader
+  - tesseract-ocr-ces
+  - tesseract-ocr-eng
+  - tesseract-ocr-deu 
