@@ -1,9 +1,11 @@
 ---
-- name: "Ensuring ppa:remmina-ppa-team/remmina-next is used"
-  apt_repository: repo='ppa:remmina-ppa-team/remmina-next'
-
-- name: "Ensuring ppa:webupd8team/atom is used"
-  apt_repository: repo='ppa:webupd8team/atom'
+- name: "Ensuring {{ item }} PPA is used"
+  apt_repository: repo="{{ item }}"
+  with_items:
+    - ppa:phoerious/keepassxc
+    - ppa:remmina-ppa-team/remmina-next
+    - ppa:alexx2000/doublecmd
+    - ppa:eivnaes/network-manager-sstp
 
 - name: Installing packages
   apt:

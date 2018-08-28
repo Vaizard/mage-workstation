@@ -2,20 +2,18 @@
 mage_packages:
   # System
   - samba
+  - e2fsprogs
+  - btrfs-progs
   # DE
   - unity-tweak-tool
-  - variety
   - dconf-cli
   - dconf-editor
   # Fonts
-  - fonts-roboto  
+  - fonts-roboto
   - ttf-mscorefonts-installer
   - ttf-xfree86-nonfree
   # Convenience
   - flashplugin-installer
-  - krusader
-  - kompare
-  - krename
   - zenmap
   - vlc
   - fbreader
@@ -25,7 +23,13 @@ mage_packages:
   - libfreerdp-plugins-standard
   - remmina
   - remmina-plugin-rdp
-  - atom
+  - libreoffice
+  - thunderbird
+  - meld
+  - keepassxc
+  - network-manager-openvpn-gnome
+  - network-manager-ssh-gnome
+  - network-manager-sstp
   # OCR
   - gimagereader
   - tesseract-ocr-ces

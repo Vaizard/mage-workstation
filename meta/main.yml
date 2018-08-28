@@ -3,18 +3,17 @@ galaxy_info:
   author: Pavel Stratil
   company: Vaizard Institute
   license: MIT
-  min_ansible_version: 2.1
-  description: Set up a workstation with gnome/unity and a complete virtualization+devops stack
+  min_ansible_version: 2.5
+  description: Ansible role to setup a workstation/desktop/laptop
   platforms:
     - name: Ubuntu
       versions:
-        - xenial
-    - name: Gentoo
-      versions:
-        - all
+        - bionic
   categories:
     - system
+    - desktop
+    - workstation
+    - laptop
 
 dependencies:
-  - { role: mage-common }
-  - { role: mage-vmhost, openssh_svcenable: "no" }
+  - { role: mage-base-common }
