@@ -6,6 +6,7 @@ mage_packages:
   - btrfs-progs
   # DE
   - unity-tweak-tool
+  - gnome-tweaks
   - dconf-cli
   - dconf-editor
   # Fonts
@@ -27,9 +28,14 @@ mage_packages:
   - thunderbird
   - meld
   - keepassxc
+  - doublecmd-gtk
+  - inkscape
   - network-manager-openvpn-gnome
   - network-manager-ssh-gnome
   - network-manager-sstp
+  - simple-scan
+  - datovka
+  - riot-web
   # OCR
   - gimagereader
   - tesseract-ocr-ces

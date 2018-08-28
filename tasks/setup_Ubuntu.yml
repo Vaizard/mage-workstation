@@ -1,15 +1,30 @@
 ---
-- name: "Ensuring {{ item }} PPA is used"
+
+- name: Ensure apt keys are configured
+  apt_key:
+    url: "{{ item }}"
+    state: present
+  with_items:
+    - https://riot.im/packages/debian/repo-key.asc
+    - https://download.opensuse.org/repositories/home:CZ-NIC:datovka-latest/xUbuntu_18.04/Release.key
+
+- name: Ensure PPAs are configured
   apt_repository: repo="{{ item }}"
   with_items:
     - ppa:phoerious/keepassxc
     - ppa:remmina-ppa-team/remmina-next
     - ppa:alexx2000/doublecmd
     - ppa:eivnaes/network-manager-sstp
+    - "deb https://riot.im/packages/debian/ bionic main"
+    - "deb http://download.opensuse.org/repositories/home:/CZ-NIC:/datovka-latest/xUbuntu_18.04/ /"
 
-- name: Installing packages
+- name: Ensure packages are installed
   apt:
-    name: "{{ mage_packages }}"
+    name: "{{ item }}"
     state: latest
     update_cache: true
+    cache_valid_time: 3600
+  with_items: "{{ mage_packages }}"
 
+- name: Ensure Gnome is configured
+  shell: "gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 30"

@@ -3,5 +3,5 @@
   include_vars: "vars_{{ ansible_distribution }}.yml"
   
 - name: "Setting things up for {{ ansible_distribution }}"
-  include: "setup_{{ ansible_distribution }}.yml"
-  when: ansible_distribution in [ 'Ubuntu', 'Gentoo' ]
+  include_tasks: "setup_{{ ansible_distribution }}.yml"
+  when: ansible_distribution in [ 'Ubuntu' ]
