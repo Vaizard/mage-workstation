@@ -36,8 +36,15 @@ mage_packages:
   - simple-scan
   - datovka
   - riot-web
+  - p7zip-full # unpacks drivers for windows and stuff
+  - jq
+  - curl
   # OCR
   - gimagereader
   - tesseract-ocr-ces
   - tesseract-ocr-eng
   - tesseract-ocr-deu 
+  - filezilla
+  - transmission-gtk
+  - ansible
+  - python-jmespath
