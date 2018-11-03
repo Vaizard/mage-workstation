@@ -39,6 +39,7 @@ mage_packages:
   - p7zip-full # unpacks drivers for windows and stuff
   - jq
   - curl
+  - etcher-electron
   # OCR
   - gimagereader
   - tesseract-ocr-ces

@@ -8,6 +8,11 @@
     - https://riot.im/packages/debian/repo-key.asc
     - https://download.opensuse.org/repositories/home:CZ-NIC:datovka-latest/xUbuntu_18.04/Release.key
 
+- name: Add an apt key by id from a keyserver
+  apt_key:
+    keyserver: pgp.mit.edu
+    id: 379CE192D401AB61
+
 - name: Ensure PPAs are configured
   apt_repository: repo="{{ item }}"
   with_items:
@@ -17,6 +22,7 @@
     - ppa:eivnaes/network-manager-sstp
     - "deb https://riot.im/packages/debian/ bionic main"
     - "deb http://download.opensuse.org/repositories/home:/CZ-NIC:/datovka-latest/xUbuntu_18.04/ /"
+    - "deb https://dl.bintray.com/resin-io/debian stable etcher"
 
 - name: Ensure packages are installed
   apt:
