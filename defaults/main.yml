@@ -1,0 +1,14 @@
+---
+
+apt_repos:
+- repo: "ppa:eivnaes/network-manager-sstp"
+  codename: "devel"
+- repo: "ppa:phoerious/keepassxc"
+- repo: "ppa:ansible/ansible"
+- repo: "deb https://dl.bintray.com/resin-io/debian stable etcher"
+  keyserver: "pgp.mit.edu"
+  keyid: "379CE192D401AB61"
+- repo: "deb https://riot.im/packages/debian/ {{ ansible_distribution_release }} main"
+  keyurl: "https://riot.im/packages/debian/repo-key.asc"
+- repo: "deb http://download.opensuse.org/repositories/home:/CZ-NIC:/datovka-latest/xUbuntu_{{ ansible_distribution_version }}/ /"
+  keyurl: "https://download.opensuse.org/repositories/home:CZ-NIC:datovka-latest/xUbuntu_{{ ansible_distribution_version }}/Release.key"

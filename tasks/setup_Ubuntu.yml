@@ -2,38 +2,32 @@
 
 - name: Ensure apt keys are configured
   apt_key:
-    url: "{{ item }}"
+    url: "{{ item.keyurl | default(omit) }}"
+    keyserver: "{{ item.keyserver | default(omit) }}"
+    id: "{{ item.keyid | default(omit) }}"
     state: present
-  with_items:
-    - https://riot.im/packages/debian/repo-key.asc
-    - https://download.opensuse.org/repositories/home:CZ-NIC:datovka-latest/xUbuntu_18.04/Release.key
-
-- name: Add an apt key by id from a keyserver
-  apt_key:
-    keyserver: pgp.mit.edu
-    id: 379CE192D401AB61
+  when: item.keyurl is defined or item.keyid is defined
+  with_items: "{{ apt_repos }}"
 
 - name: Ensure PPAs are configured
-  apt_repository: repo="{{ item }}"
-  with_items:
-    - ppa:phoerious/keepassxc
-    - ppa:remmina-ppa-team/remmina-next
-    - ppa:alexx2000/doublecmd
-    - ppa:eivnaes/network-manager-sstp
-    - "deb https://riot.im/packages/debian/ bionic main"
-    - "deb http://download.opensuse.org/repositories/home:/CZ-NIC:/datovka-latest/xUbuntu_18.04/ /"
-    - "deb https://dl.bintray.com/resin-io/debian stable etcher"
+  apt_repository: repo="{{ item.repo }}" codename="{{ item.codename | default(omit)}}"
+  loop: "{{ apt_repos }}"
+  when: apt_repos | selectattr("repo", "defined") | list | length > 0
 
 - name: Ensure packages are installed
   apt:
-    name: "{{ item }}"
+    name: "{{ mage_packages }}"
     state: latest
     update_cache: true
     cache_valid_time: 3600
-  with_items: "{{ mage_packages }}"
 
 - name: Ensure snaps get installed
-  shell: "snap install pdftk"
-
-- name: Ensure Gnome is configured
-  shell: "gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 30"
+  shell: |
+    snap install pdftk
+    snap install lxd
+    snap install libreoffice
+    snap install remmina
+    snap connect remmina:avahi-observe :avahi-observe
+    snap connect remmina:cups-control :cups-control
+    snap connect remmina:mount-observe :mount-observe
+    snap connect remmina:password-manager-service :password-manager-service

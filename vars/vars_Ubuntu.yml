@@ -13,39 +13,38 @@ mage_packages:
   - fonts-roboto
   - ttf-mscorefonts-installer
   - ttf-xfree86-nonfree
-  # Convenience
-  - flashplugin-installer
-  - zenmap
-  - vlc
-  - fbreader
-  - p7zip
-  - unrar
-  - gimp
-  - libfreerdp-plugins-standard
-  - remmina
-  - remmina-plugin-rdp
-  - libreoffice
-  - thunderbird
-  - meld
-  - keepassxc
-  - doublecmd-gtk
-  - inkscape
-  - network-manager-openvpn-gnome
-  - network-manager-ssh-gnome
-  - network-manager-sstp
-  - simple-scan
-  - datovka
-  - riot-web
-  - p7zip-full # unpacks drivers for windows and stuff
-  - jq
+  - fonts-dejavu
+  - fonts-linuxlibertine 
+  - fonts-sil-gentium
+  - fonts-sil-gentium-basic
+  # Tools and utils
+  - ansible
   - curl
+  - doublecmd-gtk
+  - keepassxc
+  - jq
+  - meld
+  - zenmap
+  # Archivers
+  - unrar
+  - p7zip-full
+  # Media
+  - gimp
+  - inkscape
+  - vlc
   - etcher-electron
-  # OCR
-  - gimagereader
+  # Office
+  - datovka
+  - fbreader
+  - simple-scan
   - tesseract-ocr-ces
   - tesseract-ocr-eng
   - tesseract-ocr-deu 
+  - thunderbird
+  # Network
   - filezilla
+  - network-manager-openvpn-gnome
+  - network-manager-ssh-gnome
+  - network-manager-sstp
   - transmission-gtk
-  - ansible
-  - python-jmespath
+  - riot-web
