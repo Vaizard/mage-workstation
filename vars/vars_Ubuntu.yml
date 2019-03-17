@@ -36,6 +36,7 @@ mage_packages:
   # Office
   - datovka
   - fbreader
+  - hplip-gui
   - simple-scan
   - tesseract-ocr-ces
   - tesseract-ocr-eng
