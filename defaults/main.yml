@@ -2,7 +2,7 @@
 
 apt_repos:
 - repo: "ppa:eivnaes/network-manager-sstp"
-  codename: "devel"
+  codename: "{{ ansible_distribution_release }}"
 - repo: "ppa:phoerious/keepassxc"
 - repo: "ppa:ansible/ansible"
 - repo: "deb https://dl.bintray.com/resin-io/debian stable etcher"
