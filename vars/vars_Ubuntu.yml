@@ -17,13 +17,16 @@ mage_packages:
   - fonts-linuxlibertine 
   - fonts-sil-gentium
   - fonts-sil-gentium-basic
-  # Tools and utils
+  # Ansible
   - ansible
+  - python-jmespath
+  # Tools and utils
   - curl
   - doublecmd-gtk
   - keepassxc
   - jq
   - meld
+  - whois
   - zenmap
   # Archivers
   - unrar
