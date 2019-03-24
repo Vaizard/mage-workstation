@@ -19,6 +19,7 @@ mage_packages:
   - fonts-sil-gentium-basic
   # Ansible
   - ansible
+  - ansible-lint
   - python-jmespath
   # Tools and utils
   - curl
