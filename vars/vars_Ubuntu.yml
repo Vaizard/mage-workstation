@@ -22,6 +22,7 @@ mage_packages:
   - ansible-lint
   - python-jmespath
   - python-passlib
+  - python-dnspython
   # Tools and utils
   - curl
   - doublecmd-gtk
