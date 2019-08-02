@@ -23,12 +23,16 @@ mage_packages:
   - python-jmespath
   - python-passlib
   - python-dnspython
+  - python-pexpect
+  - python-simplejson
   # Tools and utils
   - curl
   - doublecmd-gtk
+  - httpie
   - keepassxc
   - jq
   - meld
+  - git-lfs
   - whois
   - zenmap
   # Archivers
@@ -54,4 +58,15 @@ mage_packages:
   - network-manager-ssh-gnome
   - network-manager-sstp
   - transmission-gtk
+  # Replaced by snaps
+  #- riot-web
+
+mage_snaps:
+  - brave
+  - libreoffice
+  - lxd
+  - pdftk
+  - remmina
   - riot-web
+  - sublime-text
+  - canonical-livepatch

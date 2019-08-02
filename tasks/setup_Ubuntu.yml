@@ -21,12 +21,12 @@
     update_cache: true
     cache_valid_time: 3600
 
-- name: Ensure snaps get installed
+- name: Ensure snaps are installed
+  snap:
+    name: "{{ mage_snaps }}"
+
+- name: Ensure remmina services are connected
   shell: |
-    snap install pdftk
-    snap install lxd
-    snap install libreoffice
-    snap install remmina
     snap connect remmina:avahi-observe :avahi-observe
     snap connect remmina:cups-control :cups-control
     snap connect remmina:mount-observe :mount-observe
