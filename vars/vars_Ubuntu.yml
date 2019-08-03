@@ -17,6 +17,7 @@ mage_packages:
   - fonts-linuxlibertine 
   - fonts-sil-gentium
   - fonts-sil-gentium-basic
+  - fonts-firacode
   # Ansible
   - ansible
   - ansible-lint

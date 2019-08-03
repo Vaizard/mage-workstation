@@ -5,7 +5,7 @@ apt_repos:
   codename: "{{ ansible_distribution_release }}"
 - repo: "ppa:phoerious/keepassxc"
 - repo: "ppa:ansible/ansible"
-- repo: "deb https://dl.bintray.com/resin-io/debian stable etcher"
+- repo: "deb https://deb.etcher.io stable etcher"
   keyserver: "pgp.mit.edu"
   keyid: "379CE192D401AB61"
 - repo: "deb https://riot.im/packages/debian/ {{ ansible_distribution_release }} main"
